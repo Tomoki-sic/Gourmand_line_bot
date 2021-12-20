@@ -1,0 +1,2 @@
+# Gourmand_line_bot
+グルメ検索用のline_botを作成する
