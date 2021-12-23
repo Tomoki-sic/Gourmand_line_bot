@@ -10,6 +10,7 @@ from line_bot_ai.line_message import LineMessage
 
 @csrf_exempt
 def index(request):
+    print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     if request.method == 'POST':
         request = json.loads(request.body.decode('utf-8'))
         data = request['events'][0]
