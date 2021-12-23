@@ -14,6 +14,6 @@ admin.autodiscover()
 
 urlpatterns = [
     path('', include(('hello.urls','hello'))),
-    path('line_bot', include(('line_bot_ai.urls','line_bot_ai'))),
+    path('line_bot/', include(('line_bot_ai.urls','line_bot_ai'))),
     path("admin/", admin.site.urls),
 ]
