@@ -1,6 +1,3 @@
 django
-git+https://github.com/benoitc/gunicorn.git
---install-option="--no-deps" django-heroku
-dj-database-url
-psycopg2-binary
-whitenoise
+line-bot_sdk
+gunicorn
