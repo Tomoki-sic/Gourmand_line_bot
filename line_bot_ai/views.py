@@ -17,13 +17,10 @@ def message(request):
         if len(request['events'])!=0:
             data = request['events'][0]
             reply_token = data['replyToken']
-            print("-------------------------")
-            print(data['type'])
-            if data['type']=='text':    
-                message = data['message']
+            message = data['message']           
+            if message['type']=='text':    
                 line_message = LineMessage(message_creater.create_single_text_message(message['text']))
-            elif data['type']=='location':
-                message = data['message']
+            elif message['type']=='location':
                 line_message = LineMessage(message_creater.create_single_text_message(message['address']))
             else:
                  line_message = LineMessage(message_creater.create_single_text_message('error'))
