@@ -1,4 +1,5 @@
 django
+dj_database_url
 line-bot_sdk
 gunicorn
 django-heroku
