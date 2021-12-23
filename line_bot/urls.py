@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+import line_bot_ai.views
+
 urlpatterns = [
-    path('line_bot_ai/', include('line_bot_ai.urls')), # 追加部分
+    path("", line_bot_ai.views.index, name="index"), # 追加部分
     path('admin/', admin.site.urls),
 ]
