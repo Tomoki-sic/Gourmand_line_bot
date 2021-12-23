@@ -4,9 +4,6 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-import hello
-import line_bot_ai
-
 # To add a new path, first import the app:
 # import blog
 #
@@ -16,8 +13,7 @@ import line_bot_ai
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", hello.views.index, name="index"),
-    path("db/", hello.views.db, name="db"),
+    path('', include(('hello.urls','hello'))),
     path("line_bot/", line_bot_ai.views.message, name="message"),
     path("admin/", admin.site.urls),
 ]
