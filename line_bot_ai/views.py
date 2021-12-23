@@ -12,6 +12,8 @@ from line_bot_ai import message_creater
 def message(request):
     if request.method == 'POST':
         request = json.loads(request.body.decode('utf-8'))
+        print("-------------------------")
+        print(request)
         if len(request['events'])!=0:
             data = request['events'][0]
             message = data['message']
