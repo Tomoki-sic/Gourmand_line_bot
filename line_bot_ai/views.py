@@ -6,6 +6,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 
 from line_bot_ai.line_message import LineMessage
+from line_bot_ai import message_creater
 
 @csrf_exempt
 def message(request):
@@ -15,7 +16,7 @@ def message(request):
             data = request['events'][0]
             message = data['message']
             reply_token = data['replyToken']
-            line_message = LineMessage(message['text'])
+            line_message = LineMessage(message_creater.create_single_text_message(message['text']))
             line_message.reply(reply_token)
         return HttpResponse("ok")
 
