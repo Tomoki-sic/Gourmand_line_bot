@@ -23,6 +23,8 @@ def message(request):
             elif data['type']=='location':
                 message = data['message']
                 line_message = LineMessage(message_creater.create_single_text_message(message['address']))
+            else:
+                 line_message = LineMessage(message_creater.create_single_text_message('error'))
             line_message.reply(reply_token)
         return HttpResponse("ok")
 
