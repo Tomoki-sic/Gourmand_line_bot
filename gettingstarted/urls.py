@@ -4,8 +4,8 @@ from django.contrib import admin
 
 admin.autodiscover()
 
-import hello.views
-import line_bot_ai.views
+import hello
+import line_bot_ai
 
 # To add a new path, first import the app:
 # import blog
