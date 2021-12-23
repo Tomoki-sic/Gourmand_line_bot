@@ -11,11 +11,12 @@ from line_bot_ai.line_message import LineMessage
 def message(request):
     if request.method == 'POST':
         request = json.loads(request.body.decode('utf-8'))
-        data = request['events'][0]
-        message = data['message']
-        reply_token = data['replyToken']
-        line_message = LineMessage(message['text'])
-        line_message.reply(reply_token)
+        if len(request['events'])!=0:
+            data = request['events'][0]
+            message = data['message']
+            reply_token = data['replyToken']
+            line_message = LineMessage(message['text'])
+            line_message.reply(reply_token)
         return HttpResponse("ok")
 
 
