@@ -18,6 +18,6 @@ import line_bot_ai.views
 urlpatterns = [
     path("", hello.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
-    path("line_bot/", line_bot_ai.views.index, name="index"),
+    path("line_bot/", line_bot_ai.views.message, name="message"),
     path("admin/", admin.site.urls),
 ]

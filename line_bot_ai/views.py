@@ -21,6 +21,6 @@ def index(request):
         return HttpResponse("ok")
 """
 
-def index(request):
+def message(request):
     return render(request, "index.html")
 
