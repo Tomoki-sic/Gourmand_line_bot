@@ -1,3 +1,4 @@
 django
 line-bot_sdk
 gunicorn
+django-heroku
