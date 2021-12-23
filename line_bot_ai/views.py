@@ -22,5 +22,6 @@ def index(request):
 """
 
 def message(request):
-    return render(request, "index.html")
+    return HttpResponse("Hello, world. You're at the polls index.")
+
 
