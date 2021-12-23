@@ -17,6 +17,8 @@ def message(request):
         if len(request['events'])!=0:
             data = request['events'][0]
             reply_token = data['replyToken']
+            print("-------------------------")
+            print(data['type'])
             if data['type']=='text':    
                 message = data['message']
                 line_message = LineMessage(message_creater.create_single_text_message(message['text']))
